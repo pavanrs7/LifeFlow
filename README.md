@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Blood Donation Management System
+A web-based platform that connects blood donors with recipients and manages the blood donation process efficiently.
+Features
+For Donors
 
-## Getting Started
+Create and manage donor profiles
+Submit blood donation applications
+View donation history
+Receive notifications about donation approval status
+Update personal information and availability
+Schedule donation appointments
 
-First, run the development server:
+For Recipients
 
-```bash
+Submit blood requests with required details
+Track request status
+Receive notifications when blood is available
+View delivery status and estimated time
+Emergency request prioritization
+
+For Administrators
+
+Manage donor and recipient profiles
+Review and approve donation applications
+Process blood requests
+Track blood inventory levels
+Manage blood delivery logistics
+Generate reports and analytics
+Monitor system activity
+
+Technology Stack
+
+Frontend: React.js
+Backend: Node.js with Express
+Database: MongoDB
+Authentication: JWT
+Real-time notifications: Socket.io
+
+Installation
+
+Clone the repository:
+
+bashCopygit clone https://github.com/yourusername/blood-donation-system.git
+
+Install dependencies for backend:
+
+bashCopycd backend
+npm install
+
+Install dependencies for frontend:
+
+bashCopycd frontend
+npm install
+
+Configure environment variables:
+
+
+Create .env file in backend directory
+Add required variables:
+CopyMONGODB_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+PORT=5000
+
+
+
+Start the development servers:
+
+bashCopy# Start backend server
+cd backend
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Start frontend server
+cd frontend
+npm start
+Project Structure
+Copyblood-donation-system/
+├── backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   └── server.js
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── utils/
+│   └── package.json
+└── README.md
+API Documentation
+Donor Endpoints
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+POST /api/donors/register - Register new donor
+POST /api/donors/apply - Submit donation application
+GET /api/donors/history - Get donation history
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Recipient Endpoints
 
-## Learn More
+POST /api/recipients/request - Submit blood request
+GET /api/recipients/status - Check request status
+PUT /api/recipients/update - Update request details
 
-To learn more about Next.js, take a look at the following resources:
+Admin Endpoints
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+GET /api/admin/applications - View pending applications
+PUT /api/admin/approve - Approve donation
+GET /api/admin/inventory - View blood inventory
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributing
 
-## Deploy on Vercel
+Fork the repository
+Create a new branch (git checkout -b feature/improvement)
+Make changes and commit (git commit -am 'Add new feature')
+Push to the branch (git push origin feature/improvement)
+Create a Pull Request
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+Contact
+For any queries or support, please contact:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Email: support@blooddonation.com
+Phone: +1-234-567-8900
+
+Acknowledgments
+
+Thanks to all contributors who have helped with the development
+Special thanks to medical professionals who provided domain expertise
+Gratitude to the open-source community for various tools and libraries used
